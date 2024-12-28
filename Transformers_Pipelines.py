@@ -22,7 +22,7 @@ pipeline_type = st.sidebar.selectbox(
 # Context for Question Answering
 context = ""
 if pipeline_type == "Question Answering":
-    context = st.text_input("Enter the Context Here for Your Question")
+    context = st.text_area("Enter the Context Here for Your Question")
 
 # Select model name
 model_name = st.sidebar.selectbox(
@@ -36,7 +36,7 @@ if "OpenAI" in model_name:
     api_key = st.sidebar.text_input("Enter API Key", key="chatbot_api_key", type="password")
 
 # User Question Input
-question = st.text_input("Ask Your Question:", placeholder="What do you want to ask?")
+question = st.chat_input("Ask Your Question:", placeholder="What do you want to ask?")
 
 # Processing the Question
 if question:
