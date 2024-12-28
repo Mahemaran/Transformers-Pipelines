@@ -36,7 +36,7 @@ if "OpenAI" in model_name:
     api_key = st.sidebar.text_input("Enter API Key", key="chatbot_api_key", type="password")
 
 # User Question Input
-question = st.chat_input("Ask Your Question:", placeholder="What do you want to ask?")
+question = st.chat_input("What do you want to ask?")
 
 # Processing the Question
 if question:
